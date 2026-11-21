@@ -1,0 +1,24 @@
+[bot]
+name = "yt-view-bot"
+engine = "playwright"
+default_watch_seconds = 45
+max_concurrent_sessions = 4
+headless = true
+rotate_user_agent = true
+randomize_referrer = true
+
+[proxy]
+enabled = true
+pool_file = "config/proxies.txt"
+strategy = "round_robin"
+retry_on_fail = 3
+
+[throttle]
+min_delay_ms = 800
+max_delay_ms = 4200
+jitter = true
+
+[logging]
+level = "INFO"
+file = "logs/yt-view-bot.log"
+rotate_mb = 10
